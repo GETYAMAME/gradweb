@@ -10,6 +10,8 @@
 
 .home-search{
     padding: 0 35px 0 10px;
+        margin-top: 40px;
+    margin-bottom: 40px;
     width: 100%;
     height: 36px;
     box-sizing: border-box;
@@ -29,10 +31,41 @@
     color: #45494B;
 }
 .home-content-outer{
-  padding: 20px;
+    padding: 20px;
 }
 .home-content-inner{
-  height: 300px;
-  border: aliceblue;
-  background-color: azure;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+    border-radius: 10px;
+}
+.home-content-image{
+    width: 100%;
+    height: 280px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.home-content-text-outer{
+    padding: 10px;
+}
+.home-content-culture{
+    background-color: #ffe7c4;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+}
+
+.home-content-button{
+    border: none;
+    width: 120px;
+    float: right;
+    background-color: #f79400;
+    border-radius: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+    color: white;
+}
+.home-content-company{
+    color: slategray;
+    font-size: 12px;
 }
