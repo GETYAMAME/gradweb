@@ -68,3 +68,11 @@
     color: slategray;
     font-size: 12px;
 }
+
+.recruitment-input-content{
+    margin-bottom: 20px;
+}
+.recruitment-input-add-link{
+    float: right;
+    margin-top: 5px;
+}

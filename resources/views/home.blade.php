@@ -45,7 +45,7 @@
                         <a class="home-content-culture">発言責任</a>
                         <div style="margin-top: 6px;">
                             <a class="home-content-company">株式会社redesign</a>
-                            <button class="home-content-button" type="submit" name="button">紹介する</button>
+                            <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +63,7 @@
                         <a class="home-content-culture">One Team</a>
                         <div style="margin-top: 6px;">
                             <a class="home-content-company">株式会社ネットウェブ</a>
-                            <button class="home-content-button" type="submit" name="button">紹介する</button>
+                            <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
                         </div>
                     </div>
                 </div>
