@@ -19,11 +19,6 @@ class JobOfferTable extends Migration
             $table->string('company_code', 5);
             $table->string('job_name', 60);
             $table->string('title', 100);
-            $table->string('company_feature1', 60)->nullable();
-            $table->string('company_feature2', 60)->nullable();
-            $table->string('company_feature3', 60)->nullable();
-            $table->string('company_feature4', 60)->nullable();
-            $table->string('company_feature5', 60)->nullable();
             $table->string('outer_url', 512)->nullable();;
             $table->string('image_name', 50);
             $table->dateTime('update_date');
