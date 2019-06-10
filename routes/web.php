@@ -18,5 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/recruitment/input', 'RecruitmentInputController@index');
+Route::get('/recruitment/input/{id}', 'RecruitmentInputController@index');
 Route::get('/recruitment/confrim','RecruitmentConfrimController@index');
+Route::post('/recruitment/confrim','RecruitmentInputController@confrim');

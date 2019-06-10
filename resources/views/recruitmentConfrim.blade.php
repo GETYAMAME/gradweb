@@ -9,24 +9,23 @@
         </div>
         <div class="col-sm-2 recruitment-input-content">紹介先企業</div>
         <div class="col-sm-10 recruitment-input-content">
-            <a>株式会社ネットウェブ</a>
+            <a>{{ $jobOffer->company_name }}</a>
         </div>
         <div class="col-sm-2 recruitment-input-content">応募職種</div>
         <div class="col-sm-10 recruitment-input-content">
-            <a>Webエンジニア</a>
+            <a>{{ $jobOffer->job_name }}</a>
         </div>
         <div class="col-sm-2 recruitment-input-content">求職者名</div>
         <div class="col-sm-10 recruitment-input-content">
-            <a>藤井和樹</a>
+            <a>{{ $request->input('job_seeker_name') }}</a>
         </div>
         <div class="col-sm-2 recruitment-input-content">求職者の関連リンク</div>
         <div class="col-sm-10 recruitment-input-content">
-            <a>https://www.facebook.com/kazuki.hujiixxxxxxx</a>
+            <a>{{ $request->input('job_seeker_link1') }}</a>
         </div>
         <div class="col-sm-2 recruitment-input-content">紹介文</div>
         <div class="col-sm-10 recruitment-input-content">
-            <a>藤井は弊社にて、新規事業立ち上げ案件を複数経験しております。</a>
-            <a>彼のより良いユーザ体験を追求したいとの想いと、御社が望む条件が一致しましたのでご紹介させていただきました。ご検討のほどよろしくお願いします。</a>
+            <a>{{ $request->input('introduction') }}</a>
         </div>
         <button class="home-content-button" type="submit" name="button" onclick="location.href='../home'">実行</button>
     </div>

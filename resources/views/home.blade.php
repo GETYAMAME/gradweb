@@ -19,10 +19,14 @@
             <div class="col-md-6">
                 <div class="home-content-outer">
                     <div class="home-content-inner">
-                        <img class="home-content-image" src="{{ asset('image/'. $jobOffer->image_name) }}" alt="">
+                        <a href="{{ $jobOffer->outer_url }}" target="_blank">
+                            <img class="home-content-image" src="{{ asset('image/'. $jobOffer->image_name) }}" href="{{ $jobOffer->outer_url }}">
+                        </a>
                         <div class="home-content-text-outer">
                             <a>{{ $jobOffer->job_name }}</a>
-                            <h5>{{ $jobOffer->title }}</h5>
+                            <div>
+                                <a class="home-content-title" href="{{ $jobOffer->outer_url }}" target="_blank">{{ $jobOffer->title }}</a>
+                            </div>
                             @if(!blank($jobOffer->company_feature1))
                                 <a class="home-content-culture">{{ $jobOffer->company_feature1 }}</a>
                             @endif
@@ -40,7 +44,7 @@
                             @endif
                             <div style="margin-top: 6px;">
                                 <a class="home-content-company">{{ $jobOffer->company_name }}</a>
-                                <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
+                                <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input/{{ $jobOffer->job_offer_id }}'">紹介する</button>
                             </div>
                         </div>
                     </div>
