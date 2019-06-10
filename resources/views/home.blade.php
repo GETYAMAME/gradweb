@@ -15,61 +15,40 @@
             </div>
         </div>
         <div class="col-md-3 home-"></div>
-        <div class="col-md-6">
-            <div class="home-content-outer">
-                <div class="home-content-inner">
-                    <img class="home-content-image" src="{{ asset('image/01.png') }}" alt="">
-                    <div class="home-content-text-outer">
-                        <a>webエンジニア</a>
-                        <h5>未経験からでも成長したいエンジニア募集中！！<br>要件定義〜開発まで自社サービスを通して経験できます</h5>
-                        <a class="home-content-culture">失敗を恐れない</a>
-                        <a class="home-content-culture">プロ意識</a>
-                        <a class="home-content-culture">One Team</a>
-                        <div style="margin-top: 6px;">
-                            <a class="home-content-company">株式会社ネットウェブ</a>
-                            <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
+            @foreach ($jobOfferList as $jobOffer)
+            <div class="col-md-6">
+                <div class="home-content-outer">
+                    <div class="home-content-inner">
+                        <img class="home-content-image" src="{{ asset('image/'. $jobOffer->image_name) }}" alt="">
+                        <div class="home-content-text-outer">
+                            <a>{{ $jobOffer->job_name }}</a>
+                            <h5>{{ $jobOffer->title }}</h5>
+                            @if(!blank($jobOffer->company_feature1))
+                                <a class="home-content-culture">{{ $jobOffer->company_feature1 }}</a>
+                            @endif
+                            @if(!blank($jobOffer->company_feature2))
+                                <a class="home-content-culture">{{ $jobOffer->company_feature2 }}</a>
+                            @endif
+                            @if(!blank($jobOffer->company_feature3))
+                                <a class="home-content-culture">{{ $jobOffer->company_feature3 }}</a>
+                            @endif
+                            @if(!blank($jobOffer->company_feature4))
+                                <a class="home-content-culture">{{ $jobOffer->company_feature4 }}</a>
+                            @endif
+                            @if(!blank($jobOffer->company_feature5))
+                                <a class="home-content-culture">{{ $jobOffer->company_feature5 }}</a>
+                            @endif
+                            <div style="margin-top: 6px;">
+                                <a class="home-content-company">{{ $jobOffer->company_name }}</a>
+                                <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
+            <div class="col-md-6"></div>
         </div>
-        <div class="col-md-6">
-            <div class="home-content-outer">
-                <div class="home-content-inner">
-                    <img class="home-content-image" src="{{ asset('image/02.png') }}" alt="">
-                    <div class="home-content-text-outer">
-                        <a>webデザイナー</a>
-                        <h5>スキルアップできる仕事、企画デザイナー、グラフィックデザイナー募集</h5>
-                        <a class="home-content-culture">顧客目線</a>
-                        <a class="home-content-culture">オープン</a>
-                        <a class="home-content-culture">発言責任</a>
-                        <div style="margin-top: 6px;">
-                            <a class="home-content-company">株式会社redesign</a>
-                            <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="home-content-outer">
-                <div class="home-content-inner">
-                    <img class="home-content-image" src="{{ asset('image/03.png') }}" alt="">
-                    <div class="home-content-text-outer">
-                        <a>カスタマーサポート</a>
-                        <h5>導入企業1000社以上のSaaSシステムの要！<br>顧客一人一人に寄り添ったサポート</h5>
-                        <a class="home-content-culture">失敗を恐れない</a>
-                        <a class="home-content-culture">プロ意識</a>
-                        <a class="home-content-culture">One Team</a>
-                        <div style="margin-top: 6px;">
-                            <a class="home-content-company">株式会社ネットウェブ</a>
-                            <button class="home-content-button" type="submit" name="button" onclick="location.href='./recruitment/input'">紹介する</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6"></div>
     </div>
 </div>
 @endsection

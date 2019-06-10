@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,7 +24,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $jobOfferList = DB::table('job_offer')
+                              ->join('company_mst', 'job_offer.company_code', '=', 'company_mst.company_code')
+                              ->get();
+        return view('home',['jobOfferList'=>$jobOfferList]);
     }
-    
+
 }
